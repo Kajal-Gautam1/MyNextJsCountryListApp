@@ -1,0 +1,33 @@
+.showmap{
+    border-color: blue;
+    color: blue;
+}
+.detail{
+    border-color: blue;
+    color: blue;
+ 
+}
+.card-title{
+    margin-top: 0 auto;
+}
+.mycarddata{
+    display: flex;
+}
+.card-horizontal{
+    display: flex;
+    flex: 1 1 auto;
+  
+}
+.card {
+    flex-direction: row;
+    border-style: groove;
+    display:flex;
+}
+
+  .card img {
+    width: 30%;
+  }
+  .cardBody{
+    margin-left: 2%;
+  }
+  

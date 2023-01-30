@@ -1,0 +1,68 @@
+.column{
+    float: left;
+    width: 30.33%;
+  padding: 4px;
+ 
+}
+  
+    .card {
+    flex-direction: row;
+    display:flex;
+}
+/* .data-wrapper{
+    letter-spacing: 0.3px;
+    display: flex;
+    }
+    h4{
+    display: inline;
+    font-size:110%; 
+    margin-left: 10%;
+    } */
+    .container{
+        margin-top: 1%;
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    
+      
+    }      
+
+  .card img {
+    width: 30%;
+  }
+  .cardBody{
+    margin-left: 2%;
+  }
+  .card {
+    flex-direction: row;
+    display:flex;
+}
+.card-title{
+    margin-top: 0 auto;
+}
+.mycarddata{
+    display: flex;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .imgfluid{
+    height: 120px;
+    width: 200px;
+  
+   }
+  .p{
+    color: black;
+   line-height: 8pt;
+   font-size: 110%;
+   margin-left: 1%;
+  
+  }
+  .neighbourCountries{
+    border-style: ridge;
+    margin-top: 1%;
+       
+  }

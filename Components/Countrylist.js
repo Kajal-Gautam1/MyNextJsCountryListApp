@@ -36,7 +36,7 @@ const [card,setCard] = useState([]);
   <div className={styles.cardBody}>
       <h4 className={styles.cardTitle} key={val.id}> {val.name.common}</h4>
                  <p className={styles.cardText}>Currency:</p>
-                  <p> Current date and time:</p>
+                  <p> Timezones: {val.timezones}</p>
                  <a href={val.maps.googleMaps}>
                   <button className={styles.showmap}>Show Map</button>
                  </a>

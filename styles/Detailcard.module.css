@@ -32,6 +32,9 @@
   }
   .cardBody{
     margin-left: 2%;
+    letter-spacing: 0.6px;
+
+
   }
   .card {
     flex-direction: row;
@@ -52,7 +55,7 @@
   .imgfluid{
     height: 120px;
     width: 200px;
-  
+
    }
   .p{
     color: black;

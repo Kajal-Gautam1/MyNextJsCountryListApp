@@ -1,14 +1,21 @@
 .showmap{
     border-color: blue;
     color: blue;
-}
+    height: 4vh;
+    margin-right: 10%;
+ 
+
+ }
 .detail{
     border-color: blue;
     color: blue;
+    height: 4vh;
  
 }
-.card-title{
+.cardTitle{
     margin-top: 0 auto;
+    font-size: 140%;
+    margin-bottom: 1%;
 }
 .mycarddata{
     display: flex;
@@ -18,16 +25,26 @@
     flex: 1 1 auto;
   
 }
-.card {
+div.card {
     flex-direction: row;
     border-style: groove;
     display:flex;
+    margin-bottom: 5%;
+  border-radius:0.3em;
+  height: 30vh
+
 }
 
   .card img {
     width: 30%;
   }
   .cardBody{
+    margin-left: 2%;
+  }
+  .imgfluid{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
     margin-left: 2%;
   }
   

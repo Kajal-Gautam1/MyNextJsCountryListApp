@@ -36,81 +36,82 @@ const Detailcard = () => {
         console.log(data[0]);
         setCard(data[0]);
 
-        //fetchingn the flag of neighbourcountry1
-        let neighbr0=data[0].borders[0];
-        console.log(neighbr0);
-        fetch(`https://restcountries.com/v3.1/alpha/${neighbr0}`)
-        .then((Response) => {
-          return Response.json();
-        })
-        .then((nbrdata0) => {
-          console.log(nbrdata0[0]);
-          setneighbourCountries0(nbrdata0[0]);
-        });
+        if (data[0].borders) {
+          //fetchingn the flag of neighbourcountry1
+          if (data[0].borders[0]) {
+            let neighbr0 = data[0].borders[0];
+            console.log(neighbr0);
+            fetch(`https://restcountries.com/v3.1/alpha/${neighbr0}`)
+              .then((Response) => {
+                return Response.json();
+              })
+              .then((nbrdata0) => {
+                console.log(nbrdata0[0]);
+                setneighbourCountries0(nbrdata0[0]);
+              });
+          }
+          //fetchingn the flag of neighbourcountry2
 
-       //fetchingn the flag of neighbourcountry2
-       let neighbr1=data[0].borders[1];
-       console.log(neighbr1);
-       fetch(`https://restcountries.com/v3.1/alpha/${neighbr1}`)
-       .then((Response) => {
-         return Response.json();
-       })
-       .then((nbrdata1) => {
-         console.log(nbrdata1[0]);
-         setneighbourCountries1(nbrdata1[0]);
-       });
+          if (data[0].borders[0]) {
+            let neighbr1 = data[0].borders[1];
+            console.log(neighbr1);
+            fetch(`https://restcountries.com/v3.1/alpha/${neighbr1}`)
+              .then((Response) => {
+                return Response.json();
+              })
+              .then((nbrdata1) => {
+                console.log(nbrdata1[0]);
+                setneighbourCountries1(nbrdata1[0]);
+              });
+          }
+          //fetchingn the flag of neighbourcountry3
+          let neighbr2 = data[0].borders[2];
+          console.log(neighbr2);
+          fetch(`https://restcountries.com/v3.1/alpha/${neighbr2}`)
+            .then((Response) => {
+              return Response.json();
+            })
+            .then((nbrdata2) => {
+              console.log(nbrdata2[0]);
+              setneighbourCountries2(nbrdata2[0]);
+            });
 
-         //fetchingn the flag of neighbourcountry3
-         let neighbr2=data[0].borders[2];
-         console.log(neighbr2);
-         fetch(`https://restcountries.com/v3.1/alpha/${neighbr2}`)
-         .then((Response) => {
-           return Response.json();
-         })
-         .then((nbrdata2) => {
-           console.log(nbrdata2[0]);
-           setneighbourCountries2(nbrdata2[0]);
-         });
-  
-  
-    //fetchingn the flag of neighbourcountry4
-  let neighbr3=data[0].borders[3];
-  console.log(neighbr3);
-  fetch(`https://restcountries.com/v3.1/alpha/${neighbr3}`)
-  .then((Response) => {
-    return Response.json();
-  })
-  .then((nbrdata3) => {
-    console.log(nbrdata3[0]);
-    setneighbourCountries3(nbrdata3[0]);
-  });
+          //fetchingn the flag of neighbourcountry4
+          let neighbr3 = data[0].borders[3];
+          console.log(neighbr3);
+          fetch(`https://restcountries.com/v3.1/alpha/${neighbr3}`)
+            .then((Response) => {
+              return Response.json();
+            })
+            .then((nbrdata3) => {
+              console.log(nbrdata3[0]);
+              setneighbourCountries3(nbrdata3[0]);
+            });
 
-    //fetchingn the flag of neighbourcountry5
-    let neighbr4=data[0].borders[4];
-    console.log(neighbr4);
-    fetch(`https://restcountries.com/v3.1/alpha/${neighbr4}`)
-    .then((Response) => {
-      return Response.json();
-    })
-    .then((nbrdata4) => {
-      console.log(nbrdata4[0]);
-      setneighbourCountries4(nbrdata4[0]);
-    });
+          //fetchingn the flag of neighbourcountry5
+          let neighbr4 = data[0].borders[4];
+          console.log(neighbr4);
+          fetch(`https://restcountries.com/v3.1/alpha/${neighbr4}`)
+            .then((Response) => {
+              return Response.json();
+            })
+            .then((nbrdata4) => {
+              console.log(nbrdata4[0]);
+              setneighbourCountries4(nbrdata4[0]);
+            });
 
-      //fetchingn the flag of neighbourcountry6
-      let neighbr5=data[0].borders[5];
-      console.log(neighbr5);
-      fetch(`https://restcountries.com/v3.1/alpha/${neighbr5}`)
-      .then((Response) => {
-        return Response.json();
-      })
-      .then((nbrdata5) => {
-        console.log(nbrdata5[0]);
-        setneighbourCountries5(nbrdata5[0]);
-      });
-
-     
-     
+          //fetchingn the flag of neighbourcountry6
+          let neighbr5 = data[0].borders[5];
+          console.log(neighbr5);
+          fetch(`https://restcountries.com/v3.1/alpha/${neighbr5}`)
+            .then((Response) => {
+              return Response.json();
+            })
+            .then((nbrdata5) => {
+              console.log(nbrdata5[0]);
+              setneighbourCountries5(nbrdata5[0]);
+            });
+        }
       });
   };
 
@@ -141,27 +142,47 @@ const Detailcard = () => {
           <h2>Neighbour Countries</h2>
           <br />
           <div className={styles.row}>
-          <div className={styles.column}>
-              <img className={styles.imgfluid} src={neighbourCountries0?.flags?.png} />
-            </div>
-             <div className={styles.column}>
-              <img className={styles.imgfluid} src={neighbourCountries1?.flags?.png} />
+            <div className={styles.column}>
+              <img
+                className={styles.imgfluid}
+                src={neighbourCountries0?.flags?.png}
+              />
             </div>
             <div className={styles.column}>
-              <img className={styles.imgfluid} src={neighbourCountries2?.flags?.png}  />
+              <img
+                className={styles.imgfluid}
+                src={neighbourCountries1?.flags?.png}
+              />
             </div>
-          </div>
-          <br />
+            <div className={styles.column}>
+              <img
+                className={styles.imgfluid}
+                src={neighbourCountries2?.flags?.png}
+              />
+            </div>
+
+           
+          </div>         
+            <br />
 
           <div className={styles.row}>
             <div className={styles.column}>
-              <img className={styles.imgfluid} src={neighbourCountries3?.flags?.png} />
+              <img
+                className={styles.imgfluid}
+                src={neighbourCountries3?.flags?.png}
+              />
             </div>
             <div className={styles.column}>
-              <img className={styles.imgfluid} src={neighbourCountries4?.flags?.png}  />
+              <img
+                className={styles.imgfluid}
+                src={neighbourCountries4?.flags?.png}
+              />
             </div>
             <div className={styles.column}>
-              <img className={styles.imgfluid} src={neighbourCountries5?.flags?.png} />
+              <img
+                className={styles.imgfluid}
+                src={neighbourCountries5?.flags?.png}
+              />
             </div>
           </div>
         </div>

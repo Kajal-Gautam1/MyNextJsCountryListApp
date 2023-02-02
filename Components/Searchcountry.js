@@ -7,23 +7,11 @@ const SearchCountry = () => {
   const [newcurrCountry, newsetCountry] = useState();
   const [data, setData] = useState([]);
 
-  // const fetchData =()=>{
-
-  //     fetch(`https://restcountries.com/v3.1/name/${currCountry}?fullText=true`).then((Response)=>{
-  //       return Response.json();
-  //     }).then((data)=>{
-  //         newsearchcountry(data);
-  //         console.log(searchcountry);
-  //     })
-  //     }
 
   const searchCountry = (event) => {
     setCountry(event.target.value);
   };
 
-  // console.log(url);
-  // newmyurl(url);
-  // console.log(myurl);
 
   const onSubmit = () => {
     newsetCountry(currCountry);
@@ -69,7 +57,7 @@ console.log(Response.status);
          {  
          
          data.name && <div className={styles.card} > 
-<img className="img-fluid "  src={data?.flags?.png} alt=""/>
+<img className={styles.imgfluid}   src={data?.flags?.png} alt=""/>
   <div className={styles.cardBody}>
       <h4 className={styles.cardTitle}> {data?.name?.common}</h4>
                  <p className={styles.cardText}>Currency:</p>

@@ -12,12 +12,17 @@ font-size: 105%;
 }
 .showmap{
   border-color: blue;
-  color: blue;
+  border-width:1mm;  
+color: blue;
   height: 6vh;
   margin-right: 7%;
 margin-bottom: 3%;
 width: 40%;
 font-size: medium;
+background-color:#ffffff;
+border-radius: 1mm; 
+
+
 }
 .detail{
   border-color: blue;
@@ -26,6 +31,11 @@ font-size: medium;
 margin-bottom: 3%;
 width: 45%;
 font-size: medium;
+border-width:1mm;  
+background-color:#ffffff;
+border-radius: 1mm; 
+
+
 }
 
 
@@ -50,7 +60,8 @@ font-size: medium;
   display:flex;
   margin-bottom: 5%;
 border-radius:0.3em;
-height: 30vh
+height: 30vh;
+box-shadow: 0 7px 4px -8px black;
 
 }
 

@@ -60,7 +60,7 @@ border-radius: 1mm;
   display:flex;
   margin-bottom: 5%;
 border-radius:0.3em;
-height: 30vh;
+height: 27vh;
 box-shadow: 0 7px 4px -8px black;
 
 }
@@ -81,11 +81,14 @@ box-shadow: 0 7px 4px -8px black;
     margin-left: 2%;
   }
   .timezones{
-    margin-bottom: 4%;
     color: black;
     font-size:large;
+    margin-top: 1%;
 
   }
   .cardText{
     font-size:large;
+    margin-top: 2%;
+    margin-bottom: 3%;
+ 
   }

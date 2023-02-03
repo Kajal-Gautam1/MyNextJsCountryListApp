@@ -5,10 +5,6 @@ import Link from 'next/link';
 
 const Countrylist=()=>{
 const [card,setCard] = useState([]);
-// const [timezone,settimezone]=useState('');
-// const [country,setcountry]=useState('');
-// const [currentdate,setcurrentdate]=useState('');
-
  const fetchData =()=>{
   fetch("https://restcountries.com/v3.1/all").then((Response)=>{
     return Response.json();
@@ -23,25 +19,20 @@ const [card,setCard] = useState([]);
   },[]);
   
   
-  // function calcTime(Country, offset) {
+  function calcTime(Country, offset) {
   
-  //   let len=timezone.length;
-  // let newstring=timezone.substring(3,len+1);
-  //  offset=newstring.replace(":",".")
+    let len=offset.length;
+  let newstring=offset.substring(3,len+1);
+   let offset1=newstring.replace(":",".")
   
-  //     let  d = new Date();
-  //     let utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-  //     let  nd = new Date(utc + (3600000*offset));
-  //     let mytime=" "+ nd.toLocaleString();
-  //     setcurrentdate(mytime);
-  //     console.log(currentdate)
-  //     return mytime;
-  //     }
-  
-  
-  
-
-
+      let  d = new Date();
+      let utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+      let  nd = new Date(utc + (3600000*offset1));
+      let mytime=" "+ nd.toLocaleString();
+      // setcurrentdate(mytime);
+      return mytime;
+      }
+               
   return (
 <>
 
@@ -53,8 +44,8 @@ const [card,setCard] = useState([]);
 <img className={styles.imgfluid}  src={val.flags.png} alt=""/>
   <div className={styles.cardBody}>
       <h4 className={styles.cardTitle} key={val.id}> {val.name.common}</h4>
-                 <p className={styles.cardText}>Currency:</p>
-                  <p> Timezones: {val.timezones}</p>
+                 <p className={styles.cardText}>Currency: {val.currencies!=undefined?Object.values(val.currencies)[0].name:""}</p>
+                  <p className={styles.timezones}> Current date and time: {calcTime(val.name.common,val.timezones[0])}</p>
                  <a href={val.maps.googleMaps}>
                   <button className={styles.showmap}>Show Map</button>
                  </a>
@@ -63,13 +54,10 @@ const [card,setCard] = useState([]);
                  </Link>
                  
           </div>
-        
-          {/* { settimezone(val.timezones[0])}
-{setcountry(val.name.common)}
-{calcTime(timezone,country)} */}
-
+    
+      
 </div>
-
+  
 
     );
   })

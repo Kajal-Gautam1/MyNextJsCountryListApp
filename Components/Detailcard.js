@@ -52,7 +52,7 @@ const Detailcard = () => {
           }
           //fetchingn the flag of neighbourcountry2
 
-          if (data[0].borders[0]) {
+          if (data[0].borders[1]) {
             let neighbr1 = data[0].borders[1];
             console.log(neighbr1);
             fetch(`https://restcountries.com/v3.1/alpha/${neighbr1}`)
@@ -122,69 +122,106 @@ const Detailcard = () => {
   return (
     <>
       <div className={styles.container}>
-        <h2 id={styles.countryname}>{card?.name?.common}</h2>
+        <h2 className={styles.countryname}>{card?.name?.common}</h2>
         <div className={styles.card}>
           <img className="img-fluid " src={card?.flags?.png} alt="" />
           <div className={styles.cardBody}>
             <p className="NativeName"> </p>
-            <p className={styles.p}>Capital:{card?.capital}</p>
-            <p className={styles.p}>Population:{card?.population} </p>
-            <p className={styles.p}>Region:{card?.region} </p>
-            <p className={styles.p}>Sub-region:{card?.subregion}</p>
+            <p className={styles.p}>Capital: {card?.capital}</p>
+            <p className={styles.p}>Population: {card?.population} </p>
+            <p className={styles.p}>Region: {card?.region} </p>
+            <div className={styles.pp}>
+              <div>
+                <span className={styles.p}>SubRegion: </span>
+              </div>
+              <div>
+                <span className={styles.p}>
+                {card?.subregion}
+                </span>
+              </div>
+            </div>
+
             <p className={styles.p}>Area: {card?.area}</p>
-            <p className={styles.p}>Languages:{card.languages!=undefined?Object.values(card.languages)+",":""}</p>
-            <p className={styles.p}>Currencies:{card.currencies!=undefined?Object.values(card.currencies)[0].name:""}</p>
-            <p className={styles.p}>Timezones:{card?.timezones}</p>
+            <p className={styles.p}>
+              Languages:  {card.languages != undefined
+                ? Object.values(card.languages) + " "
+                : ""}
+            </p>
+            <div className={styles.pp}>
+              <div>
+                <span className={styles.p}>Currencies:</span>
+              </div>
+              <div>
+                <span className={styles.p}>
+                  {card.currencies != undefined
+                    ? Object.values(card.currencies)[0].name
+                    : ""}
+                </span>
+              </div>
+            </div>
+             <p className={styles.p}>Timezones: {card?.timezones}</p>
           </div>
         </div>
-<br/><br/>
+        <br />
+        <br />
         <div className={styles.neighbourCountries}>
-          <h2>Neighbour Countries</h2>
+          <h2 className={styles.heading}>Neighbour Countries</h2>
           <br />
           <div className={styles.row}>
-            <div className={styles.column}>
-              <img
-                className={styles.imgfluid}
-                src={neighbourCountries0?.flags?.png!=undefined?neighbourCountries0?.flags?.png:""}
-              />
-            </div>
-            <div className={styles.column}>
-              <img
-                className={styles.imgfluid}
-                src={neighbourCountries1?.flags?.png!=undefined?neighbourCountries1?.flags?.png:""}
-              />
-              {console.log(neighbourCountries1?.flags?.png)}
-            </div>
-            <div className={styles.column}>
-              <img
-                className={styles.imgfluid}
-                src={neighbourCountries2?.flags?.png!=undefined?neighbourCountries2?.flags?.png:""}
-              />
-            </div>
-
-           
-          </div>         
-            <br />
+            {neighbourCountries0?.flags?.png != undefined ? (
+              <div className={styles.column}>
+                <img
+                  className={styles.imgfluid}
+                  src={neighbourCountries0?.flags?.png}
+                />
+              </div>
+            ) : null}
+            {neighbourCountries1?.flags?.png != undefined ? (
+              <div className={styles.column}>
+                <img
+                  className={styles.imgfluid}
+                  src={neighbourCountries1?.flags?.png}
+                />
+              </div>
+            ) : null}
+           {neighbourCountries2?.flags?.png != undefined ? (
+              <div className={styles.column}>
+                <img
+                  className={styles.imgfluid}
+                  src={neighbourCountries2?.flags?.png}
+                />
+              </div>
+            ) : null}
+            
+          </div>
+          <br />
 
           <div className={styles.row}>
-            <div className={styles.column}>
-              <img
-                className={styles.imgfluid}
-                src={neighbourCountries3?.flags?.png!=undefined?neighbourCountries3?.flags?.png:""}
-              />
-            </div>
-            <div className={styles.column}>
-              <img
-                className={styles.imgfluid}
-                src={neighbourCountries4?.flags?.png!=undefined?neighbourCountries4?.flags?.png:""}
-              />
-            </div>
-            <div className={styles.column}>
-              <img  src={neighbourCountries5?.flags?.png!=undefined?neighbourCountries5?.flags?.png:""}
-                className={styles.imgfluid}
-              
-              />
-            </div>
+          {neighbourCountries3?.flags?.png != undefined ? (
+              <div className={styles.column}>
+                <img
+                  className={styles.imgfluid}
+                  src={neighbourCountries3?.flags?.png}
+                />
+              </div>
+            ) : null}
+           {neighbourCountries4?.flags?.png != undefined ? (
+              <div className={styles.column}>
+                <img
+                  className={styles.imgfluid}
+                  src={neighbourCountries4?.flags?.png}
+                />
+              </div>
+            ) : null}
+            {neighbourCountries5?.flags?.png != undefined ? (
+              <div className={styles.column}>
+                <img
+                  className={styles.imgfluid}
+                  src={neighbourCountries5?.flags?.png}
+                />
+              </div>
+            ) : null}
+            
           </div>
         </div>
       </div>

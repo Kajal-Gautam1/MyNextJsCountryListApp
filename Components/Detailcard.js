@@ -143,7 +143,7 @@ const Detailcard = () => {
 
             <p className={styles.p}>Area: {card?.area}</p>
             <p className={styles.p}>
-              Languages:  {card.languages != undefined
+              Languages:{card.languages != undefined
                 ? Object.values(card.languages) + " "
                 : ""}
             </p>

@@ -28,7 +28,7 @@
     }      
 
   .card img {
-    width: 30%;
+    width: 50%;
   }
   .cardBody{
     margin-left: 2%;
@@ -60,7 +60,7 @@
   .p{
     color: black;
    line-height: 8pt;
-   font-size: 110%;
+   font-size: large;
    margin-left: 1%;
   
   }

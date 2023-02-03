@@ -29,6 +29,7 @@
 
   .card img {
     width: 50%;
+    margin-left: 2%;
   }
   .cardBody{
     margin-left: 2%;
@@ -42,6 +43,7 @@
 }
 .card-title{
     margin-top: 0 auto;
+   
 }
 .mycarddata{
     display: flex;
@@ -62,10 +64,26 @@
    line-height: 8pt;
    font-size: large;
    margin-left: 1%;
-  
+
   }
   .neighbourCountries{
     border-style: ridge;
     margin-top: 1%;
         
   }
+  .pp{
+    display: flex;
+   flex-direction:row;  
+  
+     }
+     .heading{
+      margin-left: 4%;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     }
+     .row{
+      margin-left: 4%;
+     }
+     .countryname{
+      margin-left: 2%;
+     }
+     

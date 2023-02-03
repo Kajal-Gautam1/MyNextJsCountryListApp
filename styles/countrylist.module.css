@@ -6,6 +6,10 @@
  margin-bottom: 3%;
 width: 40%;
 font-size: medium;
+background-color:#ffffff;
+border-width:1mm; 
+border-radius: 1mm; 
+
  }
 .detail{
     border-color: blue;
@@ -14,6 +18,11 @@ font-size: medium;
  margin-bottom: 3%;
  width: 45%;
  font-size: medium;
+ background-color:#ffffff;
+ border-width:1mm;  
+ border-radius: 1mm; 
+
+
 }
 .cardTitle{
     margin-top: 4%;
@@ -33,9 +42,10 @@ div.card {
     flex-direction: row;
     border-style: groove;
     display:flex;
-    margin-bottom: 5%;
+    margin-bottom: 4%;
   border-radius:0.3em;
-  height: 30vh
+  height: 30vh;
+  box-shadow: 0 7px 4px -8px black;
 
 }
 

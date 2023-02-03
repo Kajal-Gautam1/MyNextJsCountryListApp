@@ -132,12 +132,12 @@ const Detailcard = () => {
             <p className={styles.p}>Region:{card?.region} </p>
             <p className={styles.p}>Sub-region:{card?.subregion}</p>
             <p className={styles.p}>Area: {card?.area}</p>
-            <p className={styles.p}>Languages:{card[0]?.languages}</p>
-            <p className={styles.p}>Currencies:{}</p>
+            <p className={styles.p}>Languages:{card.languages!=undefined?Object.values(card.languages)+",":""}</p>
+            <p className={styles.p}>Currencies:{card.currencies!=undefined?Object.values(card.currencies)[0].name:""}</p>
             <p className={styles.p}>Timezones:{card?.timezones}</p>
           </div>
         </div>
-
+<br/><br/>
         <div className={styles.neighbourCountries}>
           <h2>Neighbour Countries</h2>
           <br />
@@ -145,19 +145,20 @@ const Detailcard = () => {
             <div className={styles.column}>
               <img
                 className={styles.imgfluid}
-                src={neighbourCountries0?.flags?.png}
+                src={neighbourCountries0?.flags?.png!=undefined?neighbourCountries0?.flags?.png:""}
               />
             </div>
             <div className={styles.column}>
               <img
                 className={styles.imgfluid}
-                src={neighbourCountries1?.flags?.png}
+                src={neighbourCountries1?.flags?.png!=undefined?neighbourCountries1?.flags?.png:""}
               />
+              {console.log(neighbourCountries1?.flags?.png)}
             </div>
             <div className={styles.column}>
               <img
                 className={styles.imgfluid}
-                src={neighbourCountries2?.flags?.png}
+                src={neighbourCountries2?.flags?.png!=undefined?neighbourCountries2?.flags?.png:""}
               />
             </div>
 
@@ -169,19 +170,19 @@ const Detailcard = () => {
             <div className={styles.column}>
               <img
                 className={styles.imgfluid}
-                src={neighbourCountries3?.flags?.png}
+                src={neighbourCountries3?.flags?.png!=undefined?neighbourCountries3?.flags?.png:""}
               />
             </div>
             <div className={styles.column}>
               <img
                 className={styles.imgfluid}
-                src={neighbourCountries4?.flags?.png}
+                src={neighbourCountries4?.flags?.png!=undefined?neighbourCountries4?.flags?.png:""}
               />
             </div>
             <div className={styles.column}>
-              <img
+              <img  src={neighbourCountries5?.flags?.png!=undefined?neighbourCountries5?.flags?.png:""}
                 className={styles.imgfluid}
-                src={neighbourCountries5?.flags?.png}
+              
               />
             </div>
           </div>

@@ -1,0 +1,94 @@
+.searchBox{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchtext{
+width: 100%;
+height: 5vh;
+text-transform: capitalize;
+font-size: 105%;
+}
+.showmap{
+  border-color: blue;
+  border-width:1mm;  
+color: blue;
+  height: 6vh;
+  margin-right: 7%;
+margin-bottom: 3%;
+width: 40%;
+font-size: medium;
+background-color:#ffffff;
+border-radius: 1mm; 
+
+
+}
+.detail{
+  border-color: blue;
+  color: blue;
+  height: 6vh;
+margin-bottom: 3%;
+width: 45%;
+font-size: medium;
+border-width:1mm;  
+background-color:#ffffff;
+border-radius: 1mm; 
+
+
+}
+
+
+.cardTitle{
+  margin-top: 4%;
+  font-size: 150%;
+  margin-bottom: 1%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.mycarddata{
+    display: flex;
+}
+.card-horizontal{
+    display: flex;
+    flex: 1 1 auto;
+  
+}
+.card {
+  flex-direction: row;
+  border-style: groove;
+  display:flex;
+  margin-bottom: 5%;
+border-radius:0.3em;
+height: 27vh;
+box-shadow: 0 7px 4px -8px black;
+
+}
+
+  .card img {
+    width: 30%;
+  }
+  .cardBody{
+    margin-left: 2%;
+  }
+  .serchbtn{
+    height: 6vh;
+  }
+  .imgfluid{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+  .timezones{
+    color: black;
+    font-size:large;
+    margin-top: 1%;
+
+  }
+  .cardText{
+    font-size:large;
+    margin-top: 2%;
+    margin-bottom: 3%;
+ 
+  }
